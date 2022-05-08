@@ -1,0 +1,100 @@
+.register__body {
+	display: grid;
+	width: 100vw;
+	height: 100vh;
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+	"header"
+	"nav"
+	"main"
+	"footer";
+}
+
+header {
+	grid-area: header;
+}
+
+nav {
+	grid-area: nav;
+}
+
+.register__main {
+	grid-area: main;
+}
+
+footer {
+	grid-area: footer;
+}
+
+
+.register__main {
+	@include flex-center-default;
+	&__form {
+		padding: 1.2rem;
+		width: 35rem;
+		&__title {
+			text-align: center;
+			padding-bottom: 1rem;
+		}
+		&__button-container {
+			@include flex-center-default;
+			padding-top: 1rem;
+		}
+		&__first-last-name-container {
+			display: flex;
+			input {
+				margin-bottom: 1rem;
+				padding: .6rem;
+			}
+			&__first-name + &__last-name {
+				margin-left: 1.1rem;
+			}
+		}
+		&__email-dni-container {
+			display: flex;
+			input {
+				margin-bottom: 1rem;
+				padding: .6rem;
+			}
+			&__email + &__dni {
+				margin-left: 1.1rem;
+			}
+		}
+
+		&__password-address-container {
+			display: flex;
+			flex-direction: column;
+			
+			input {
+				margin-bottom: 1rem;
+				padding: .6rem;
+			}
+		}
+
+		&__city-state-zip-container {
+			display: flex;
+			padding-bottom: 1rem;
+			&__city {
+				width: 18.36rem;
+			}
+			&__state {
+				width: 10rem;
+			}
+			&__zip {
+				width: 8rem;
+			}
+			&__city +  &__state {
+				margin-left: 1.1rem;
+			}
+			&__state + &__zip {
+				margin-left: 1.1rem;
+			}
+		}
+
+
+		
+	}
+	
+}
+
+

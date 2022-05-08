@@ -1,0 +1,26 @@
+.global-nav {
+	background-color: black;
+	font-size: 1.5rem;
+	width: 100vw;
+	@include flex-center-default;
+	
+	ul {
+		gap: 3rem;
+		height: 4rem;
+		@include flex-center-default;
+		li {
+			a {
+				display: inline-block;
+				text-decoration: none;
+				transition: 200ms transform ease-in-out;
+				color: white;
+				&:hover {
+					color: red;
+					transform: scale(1.240);
+				}
+			}
+		}
+	}
+}
+
+

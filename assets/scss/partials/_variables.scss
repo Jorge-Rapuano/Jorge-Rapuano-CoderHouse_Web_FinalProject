@@ -1,0 +1,36 @@
+//Variables
+$smooth-white: #e8e8e4;
+$product-card__button--color: hsl(200, 50%, 50%);
+
+//Maps
+$flex-map: (
+    text-align: center,
+    flex-direction: column,
+    justify-content-center: center
+);
+
+
+
+// Extends
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Mixins 
+@mixin flex-center-default ($display:flex, $justify-content: center, $align-items: center) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+
+@mixin flex-center-optional ($display: flex, $justify-content: null, $align-items: null, $text-align:null, $flex-direction:null) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    text-align: $text-align;
+    flex-direction: $flex-direction;
+}
+

@@ -1,0 +1,136 @@
+.index__body {
+	display: grid;
+	width: 100vw;
+	height: 100vh;
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+	"header"
+	"nav"
+	"main"
+	"footer";
+}
+
+header {
+	grid-area: header;
+}
+
+nav {
+	grid-area: nav;
+}
+
+.index__main{
+	grid-area: main;
+}
+
+footer {
+	grid-area: footer;
+}
+
+.index__main {
+    &__carousel-size {
+        height: 50.5rem;
+        img {
+            height: 50.5rem;
+        }
+    }
+    &__text {
+        text-align: center;
+        padding: 1rem; 
+    }
+    &__deals {
+        @include flex-center-default;
+        padding: 2rem 0 2rem 0;
+    }
+
+    &__card {
+        margin-bottom: 3rem;
+        transition: 200ms transform ease-in-out;
+        display: inline-block;
+        margin-left: 4rem;
+        &:hover {
+            transform: scale(1.050);
+        }
+        img {
+            height: 15rem;
+        }
+        &__body {
+            &__card-title {
+                font-size: 1.5rem;
+            }
+            a {
+                width: 7rem;
+            }
+            button {
+                background-color: $product-card__button--color;
+                border: none;
+                color: white;
+                font-size: 1rem;
+                padding: 0.5em 2.55em;
+                border-radius: 0.25em;
+                margin-top: 1.3rem;
+            }
+            
+            &__price {
+                padding-top: 1rem;
+                font-size: .75rem;
+                font-weight: bold;
+                text-align: left;
+                text-decoration: line-through;
+                display: inline-block;
+                &--promo {
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            }
+            &__months {
+                padding-top: 0rem;
+			    font-size: 1rem;
+            }
+            &__btn-stock--in-stock {
+                display: inline-block;
+                @include flex-center-default;
+                margin: 0rem;
+                padding: 0.40rem !important;
+                width: 7rem;
+                height: 2rem;
+                background-color: hsl(101, 96%, 33%) !important;
+            }
+            &__btn-stock--low-stock {
+                display: inline-block;
+                @include flex-center-default;
+                margin: 0rem;
+                padding: 0.40rem !important;
+                width: 7rem;
+                height: 2rem;
+                background-color: hsl(39, 99%, 30%) !important;
+            }
+            &__btn-stock--consult-stock {
+                font-size: .9rem !important;
+                display: inline-block;
+                @include flex-center-default;
+                margin: 0rem;
+                padding: 0rem !important;
+                width: 7rem;
+                height: 2rem;
+                background-color: hsl(0, 0%, 30%) !important;
+            }
+            &__btn-stock--no-stock {
+                display: inline-block;
+                @include flex-center-default;
+                margin: 0rem;
+                padding: .4rem !important;
+                width: 7rem;
+                height: 2rem;
+                background-color: hsl(0, 100%, 32%) !important;
+                font-size: .9rem !important;
+            }
+            a {
+                margin-top: 1rem;
+            }
+            &__add-cart {
+                margin-left: 2rem;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,76 @@
+.contact__body {
+	display: grid;
+	width: 100vw;
+	height: 100vh;
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+	"header"
+	"nav"
+	"main"
+	"footer";
+}
+
+header {
+	grid-area: header;
+}
+
+nav {
+	grid-area: nav;
+}
+
+.contact__main{
+	grid-area: main;
+}
+
+footer {
+	grid-area: footer;
+}
+
+.contact__main {
+	display: flex;
+	&__info {
+		flex-direction: map-get($flex-map, flex-direction);
+		@include flex-center-default;
+		padding-left: 10rem;
+		width: 50%;
+		img {
+			opacity: 100%;
+		}
+		h2 {
+			padding-top: 8rem;
+		}
+	}
+	&__form {
+		padding: 3rem 0 3rem 0;
+		@include flex-center-default;
+		flex-direction: column;
+		width: 50%;
+		input {
+			margin-bottom: 1rem;
+			width: 35vw;
+		}
+		&__map {
+			width: 35vw;
+			height: 30rem;
+			padding-top: 1rem;
+			iframe {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		&__button-container-send {
+			@include flex-center-default;
+			justify-content: map-get($flex-map, justify-content-center);
+			padding: 1rem 0rem 1rem 0rem;
+			button {
+				width: 6rem;
+			}
+		}
+		&__textarea-container {
+			textarea {
+				height: 9rem;
+				width: 35vw;
+			}
+		}
+	}
+}

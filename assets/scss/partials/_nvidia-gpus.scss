@@ -1,0 +1,180 @@
+.default-products-body {
+	display: grid;
+	width: 100vw;
+	height: 100vh;
+	grid-template-columns: 1fr 3fr;
+	grid-template-areas: 
+	"header header"
+	"nav nav"
+	"aside main"
+	"footer footer";
+}
+
+header {
+	grid-area: header;
+}
+
+nav {
+	grid-area: nav;
+}
+
+.products-aside-categories-container {
+	grid-area: aside;
+}
+
+.products__main {
+	grid-area: main;
+}
+
+footer {
+	grid-area: footer;
+}
+
+.product-card-container {
+	display: flex;
+	background-color: white;
+	width: auto;
+	height: 17rem;
+	margin: 0.8rem;
+	box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 0.35rem;
+	transition: 200ms transform ease-in-out;
+	&:hover {
+		transform: scale(1.050);
+	}
+	&__image {
+		width: 20rem;
+		height: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__info {
+		width: 80%;
+		height: 100%;
+		font-size: 0.9rem;
+		padding: 1rem;
+		justify-content: flex-start;
+		text-align: left;
+		&__price {
+			padding-top: 1rem;
+			font-size: .75rem;
+			font-weight: bold;
+			text-align: left;
+			text-decoration: line-through;
+			display: inline-block;
+			&--promo{
+				font-size: 1rem;
+				font-weight: bold;
+			}
+		}
+		&__months {
+			padding-top: 20rem;
+			font-size: 10rem;
+		}
+		h2 {
+			font-size: 2rem;
+			font-weight: bold;	
+		}
+
+		&__btn-dark {
+			background-color: $product-card__button--color;
+			border: none;
+			color: white;
+			font-size: 1rem;
+			padding: 0.5em 2.75em;
+			border-radius: 0.25em;
+			margin-top: .75rem;
+			&:hover {
+				background-color: hsl(200, 50%, 60%);
+			}
+		}
+		&__btn-light {
+			background-color: $product-card__button--color;
+			border: none;
+			color: white;
+			font-size: 1rem;
+			padding: 0.5em 2.75em;
+			border-radius: 0.25em;
+			margin-top: .75rem;
+		}
+		&__btn-stock--in-stock {
+			border: none;
+			color: white;
+			font-size: 1rem;
+			padding: 0.5em 2.52em;
+			border-radius: 0.25em;
+			margin-top: .4rem;
+			background-color: hsl(101, 96%, 33%);
+			&:hover {
+				cursor:auto;
+			}
+		}
+		&__btn-stock--low-stock {
+			border: none;
+			color: white;
+			font-size: 1rem;
+			padding: 0.5em 2em;
+			border-radius: 0.25em;
+			margin-top: .4rem;
+			background-color: hsl(39, 99%, 30%);
+			&:hover {
+				cursor:auto;
+			}
+		}
+		&__btn-stock--consult-stock {
+			border: none;
+			color: white;
+			font-size: 1rem;
+			padding: 0.5em 0.9em;
+			border-radius: 0.25em;
+			margin-top: .4rem;
+			background-color: hsl(0, 0%, 30%);
+			&:hover {
+				cursor:auto;
+			}
+		}
+		&__btn-stock--no-stock {
+			border: none;
+			color: white;
+			font-size: 1rem;
+			padding: 0.5em 1.3em;
+			border-radius: 0.25em;
+			margin-top: .4rem;
+			background-color: hsl(0, 100%, 32%);
+			&:hover {
+				cursor:auto;
+			}
+		}
+		&__stock-tooltip {
+			img {
+				opacity: 70%;
+				width: 2.5rem;
+				height: 2.5rem;
+				margin-bottom: .40rem;
+				&:hover {
+					opacity: 100%;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+
+// Revisar
+.product-card-container__info .product-card-container__info__btn-light {
+	background: none;
+	border: 1px solid $product-card__button--color;
+	color: $product-card__button--color;
+}
+
+.product-card-container__info__btn-light:hover {
+	background-color: hsl(200, 50%, 50%);
+	color: white;
+}
+
+.product-card-container__info__btn-dark + .product-card-container__info__btn-light {
+	margin-left: 1rem;
+}

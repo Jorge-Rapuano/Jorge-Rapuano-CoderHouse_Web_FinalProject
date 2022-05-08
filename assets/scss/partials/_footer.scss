@@ -1,0 +1,29 @@
+.footer__container {
+	background-color: #ddbea9;
+	width: 100vw;
+	&__logos {
+		margin-left: 2rem;
+		a {
+			text-decoration: none;
+		}
+        a + a {
+            margin-left: 1rem;
+        }
+		a {
+			img {
+				width: 13rem;
+				opacity: 50%;
+				transition: 200ms transform ease-in-out;
+                &:hover {
+	                opacity: 100%;
+					transform: scale(1.1);
+                }
+			}
+		}
+	}
+    &__copyright {
+        flex-direction: column;
+	    text-align: center;
+    }
+	
+}

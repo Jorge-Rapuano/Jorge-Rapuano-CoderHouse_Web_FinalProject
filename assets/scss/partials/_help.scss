@@ -1,0 +1,38 @@
+.help__body {
+	display: grid;
+	width: 100vw;
+	height: 100vh;
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+	"header"
+	"nav"
+	"main"
+	"footer";
+}
+
+header {
+	grid-area: header;
+}
+
+nav {
+	grid-area: nav;
+}
+
+.help__main{
+	grid-area: main;
+}
+
+footer {
+	grid-area: footer;
+}
+
+.help__main {
+	@include flex-center-default;
+		&__questions-container {
+			padding: 2rem 0 3rem 0;
+			&__accordion {
+				width: 55vw;
+			}
+		}
+		
+}

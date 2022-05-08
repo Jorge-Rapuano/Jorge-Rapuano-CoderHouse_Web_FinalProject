@@ -1,0 +1,74 @@
+.header__container {
+	@include flex-center-default;
+	background-color: #777;
+	width: 100vw;
+	height: 12vh;
+	&__logo {
+		width: 5rem;
+		margin-right: 1rem;
+		img {
+			height: 5rem;
+		}
+	}
+	&__search-bar {
+		@include flex-center-default;
+		width: 35rem;
+		height: 4vh;
+		padding-top: 1rem;
+		position: relative;
+		&__search-icon {
+			position: absolute;
+			right: 1rem;
+			top: .5rem;
+			font-size: 1.5rem;
+		}
+		input {
+			width: 35rem;
+		}
+		&__button {
+			padding: 1.3rem;
+			background-color: black;
+			margin-bottom: 1rem;
+		}
+		&__input {
+			background-color: white;
+			padding: 1rem;
+			margin-bottom: 1rem;
+		}
+	}
+	&__socials {
+		@include flex-center-default ($justify-content:flex-end);
+		width: 12rem;
+		img {
+			padding-right: .55rem;
+			transition: 200ms transform ease-in-out;
+			&:hover {
+				transform: scale(1.240);
+			}
+		}
+	}
+	&__log-in {
+		span {
+			margin-left: 1.5rem;
+		}
+		padding: 0 1rem 0 1rem;
+		position: relative;
+		button {
+			background-color: hsl(0, 100%, 50%);
+			width: 7rem;
+			&:hover {
+				background-color: hsl(0, 100%, 20%);
+				border: none;
+			}
+		}
+		&__person-icon {
+			font-size: 1.7rem;
+			position: absolute;
+			color: white;
+			top: .35rem;
+			left: 1.8rem;
+		}
+	}
+
+	
+}

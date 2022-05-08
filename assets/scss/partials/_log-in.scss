@@ -1,0 +1,126 @@
+.log-in__body {
+	display: grid;
+	width: 100vw;
+	height: 100vh;
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+	"header"
+	"nav"
+	"main"
+	"footer";
+}
+
+header {
+	grid-area: header;
+}
+
+nav {
+	grid-area: nav;
+}
+
+.log-in__main {
+	grid-area: main;
+}
+
+footer {
+	grid-area: footer;
+}
+
+
+.log-in__main {
+	@include flex-center-default;
+	&__form {
+		&__email + &__password {
+			margin-top: 2.5rem;
+		}
+		input {
+			width: 35rem;
+			margin-bottom: 1rem;
+			padding: 1rem;
+		}
+		h1 {
+			text-align: center;
+			margin-bottom: 1rem;
+			margin-top: 6rem;
+		}
+		&__title-container {
+		text-align: center;
+		}
+		&__forgot-password {
+			@include flex-center-default;
+			width: 100%;
+			text-decoration: underline;
+			font-weight: bold;
+			font-size: 1.2rem;
+			transition: 200ms transform ease-in-out;
+			&:hover {
+				transform: scale(1.15);
+				cursor: pointer;
+			}
+		}
+		&__create-account {
+			@include flex-center-default;
+			width: 100%;
+			text-decoration: underline;
+			font-weight: bold;
+			font-size: 1.2rem;
+			transition: 200ms transform ease-in-out;
+			margin-bottom: 6rem;
+			a {
+				color: black;
+			}
+			&:hover {
+				transform: scale(1.15);
+				cursor: pointer;
+			}	
+		}
+		&__log-in-button-container {
+			text-align: center;
+			margin-bottom: .9rem;
+			
+			button {
+				width: 7rem;
+				padding: .6rem;
+			}
+			&__log-in {
+				margin-top: .8rem;
+				&__icon {
+					&__ion-arrow {
+						font-size: 1rem
+					}
+				}
+			}
+		}
+		
+		&__socials-container {
+			@include flex-center-default;
+			gap: 3rem;
+			margin-bottom: 1rem;
+			margin-top: 2.5rem;
+			button {
+				padding: .8rem;
+			}
+			&__google {
+				&__icon {
+					margin-right: .6rem;
+				}
+				&__ion-google {
+					font-size: 1.2rem;
+				}
+			}
+			&__facebook {
+				&__icon {
+					margin-right: .6rem;
+				}
+				&__ion-facebook {
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+	&__modal-body {
+		input {
+			width: 29rem;
+		}
+	}
+}
